@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MeteoPeer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/meteo-peer.css">
+  </head>
+  <body>
+    <script>
+      window.ENV = {{ENV}};
+    </script>
+		<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+    <script src="assets/meteo-peer.js"></script>
+    <script>
+      window.MeteoPeer = require('meteo-peer/app')['default'].create(ENV.APP);
+    </script>
+  </body>
+</html>

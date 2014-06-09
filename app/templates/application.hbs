@@ -1,0 +1,20 @@
+<div class="container">
+
+	<h1 id='title'>Welcome to My PeerJS chat room!</h1>
+
+	<div class="alert"><strong>Your Peer ID </strong><code>{{myPeerId}}</code></div>
+
+	<ul class="list-group" id="">
+		{{#if conn}}
+			<li class="list-group-item">{{input type="text" valueBinding="message" size=60 placeholder="Type here..." action="send"}}</li>
+		{{else}}
+			<li class="list-group-item">{{input type="text" valueBinding="otherPeerId" size=40 placeholder="Other Peer ID" action="connectTo"}}</li>
+		{{/if}}
+	</ul>
+
+	<ul class="list-group" id="messages">
+	</ul>
+
+{{outlet}}
+
+</div>
