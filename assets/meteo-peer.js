@@ -180,7 +180,8 @@ var define, requireModule, require, requirejs;
   function(__exports__) {
     "use strict";
     var Router = Ember.Router.extend({
-      location: ENV.locationType
+      location: ENV.locationType,
+    	rootURL: '/peerjs-chat-app/'
     });
 
     Router.map(function() {
